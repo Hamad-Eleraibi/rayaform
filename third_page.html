@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إعداد تقارير إنجاز عمل</title>
+  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles_third_page.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header-background">
+        <div class="logo-and-title">
+          <img src="logo.png" alt="شعار الشركة" class="logo">
+          <h1>مرحبا م. <span id="logged-in-engineer">اسم المهندس</span></h1>
+        </div>
+        <a href="index.html" class="logout-button">تسجيل الخروج</a>
+      </div>
+    </header>
+
+    <h2>إعداد تقارير إنجاز عمل</h2>
+
+    <div class="engineers-title">اسم المهندس</div>
+
+    <div class="engineers-section">
+      <div id="engineer-list" class="checkbox-group">
+        <!-- سيتم تحميل أسماء المهندسين هنا -->
+      </div>
+    </div>
+
+    <!-- الأسئلة الأخرى -->
+    <div class="form-grid">
+      <div>
+        <label for="mission-date">تاريخ المهمة</label>
+        <input type="date" id="mission-date">
+      </div>
+      <div>
+        <label for="city">المدينة</label>
+        <select id="city">
+          <option value="">اختر المدينة</option>
+          <!-- سيتم تحميل المدن هنا بواسطة script3.js -->
+        </select>
+      </div>
+      <div>
+        <label for="entity">الجهة</label>
+        <select id="entity" disabled>
+          <option value="">اختر اسم الجهة</option>
+          <!-- سيتم تحميل الجهات المتعلقة بالمدينة هنا بواسطة script3.js -->
+        </select>
+      </div>
+      <div>
+        <label for="company">الشركة</label>
+        <select id="company">
+          <option>اختر شركة الجهاز</option>
+        </select>
+      </div>
+      <div>
+        <label for="device">الجهاز</label>
+        <select id="device">
+          <option>اسم الجهاز</option>
+        </select>
+      </div>
+      <div>
+        <label for="serial-number">رقم التسلسلي</label>
+        <input type="text" id="serial-number" placeholder="يرجى إدخال رقم التسلسلي">
+      </div>
+      <div>
+        <label for="activity">النشاط</label>
+        <select id="activity">
+          <option>يرجى اختيار نوع النشاط</option>
+        </select>
+      </div>
+    </div>
+
+    <button class="next-button">التالي</button>
+
+    <script src="script3.js"></script>
+  </div>
+</body>
+</html>

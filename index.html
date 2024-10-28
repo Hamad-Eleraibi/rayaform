@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تسجيل دخول</title>
+  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles_index.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="logo-section">
+      <img src="logo.png" alt="شعار الشركة" class="custom-logo">
+      <div class="logo-text">
+        <h3>شركة الراية لتجهيز المختبرات الطبية والعلمية</h3>
+        <h1>قسم المهندسين</h1>
+      </div>
+    </div>
+
+    <div class="login-box">
+      <h2>تسجيل الدخول</h2>
+      <div class="input-container">
+        <input type="text" id="username" placeholder=" " required>
+        <label for="username">اسم المستخدم</label>
+      </div>
+
+      <div class="input-container password-container">
+        <input type="password" id="password" placeholder=" " required>
+        <label for="password">كلمة المرور</label>
+        <button type="button" id="togglePassword">عرض</button>
+      </div>
+
+      <a href="forgot_password.html" class="forgot-password">نسيت كلمة المرور؟</a>
+      <button onclick="login()">الدخول الآن</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

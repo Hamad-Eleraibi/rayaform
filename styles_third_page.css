@@ -1,0 +1,209 @@
+/* تطبيق خط Readex Pro على جميع النصوص */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Readex Pro', sans-serif;
+}
+
+/* تنسيق الخلفية والصفحة */
+body {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  padding-top: 20px;
+  direction: rtl;
+}
+
+/* الحاوية الرئيسية */
+.container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* الرأس مع الخلفية */
+.header-background {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* قسم الشعار والعنوان */
+.logo-and-title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-and-title h1 {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+  margin: 0;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+/* زر تسجيل الخروج */
+.logout-button {
+  background-color: #434343;
+  color: white;
+  font-weight: normal;
+  font-size: 14px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.logout-button:hover {
+  background-color: #333;
+}
+
+/* تنسيق العنوان الرئيسي */
+h2 {
+  text-align: center;
+  color: #333;
+  font-weight: 500;
+  font-size: 24px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* تنسيق اسم المهندس خارج الحاوية */
+.engineers-title {
+  text-align: right;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* قسم المهندسين */
+.engineers-section {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* توزيع الخيارات في شبكة */
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  justify-items: start;
+}
+
+.checkbox-group label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-left: 10px;
+}
+
+/* تنسيق مسميات الحقول */
+label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  display: block;
+  margin-bottom: 5px; /* هذه هي المسافة أسفل التسمية */
+}
+
+/* تخصيص مسميات الحقول الفردية */
+label[for="mission-date"],
+label[for="city"],
+label[for="entity"],
+label[for="company"],
+label[for="device"],
+label[for="serial-number"],
+label[for="activity"] {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px; /* مسافة تحت التسمية */
+  font-weight: 500;
+}
+
+/* تنسيق الحقول */
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* تعديل المسافات بين الحقول */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px; /* المسافة بين الحقول */
+}
+
+/* ضبط المسافة العلوية والسفلية للحقول */
+input,
+select {
+  margin-top: 11px; /* مسافة أعلى الحقل */
+  margin-bottom: 10px; /* مسافة أسفل الحقل */
+}
+
+input:focus,
+select:focus {
+  border-color: #333;
+  outline: none;
+}
+
+/* زر التالي */
+.next-button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.next-button:hover {
+  background-color: #333;
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .checkbox-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .checkbox-group {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
